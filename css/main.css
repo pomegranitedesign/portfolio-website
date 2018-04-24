@@ -1,0 +1,574 @@
+ /* ------ BASE ------ */
+html, body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  background-color: #3c40c6;
+  color: #1e272e;
+
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 62.5%;
+}
+
+textarea {
+  resize: none;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 9rem;
+  font-weight: 900;
+  display: block;
+}
+
+.align_left {
+  text-align: left;
+}
+
+.align_right {
+  text-align: right;
+}
+
+
+/* ------ HEADER ------ */
+.header {
+  height: 100vh;
+  font-size: 5rem;
+  text-align: center;
+  position: relative;
+}
+
+.typed_container {
+  display: block;
+  padding: 43vh 0 0 0;
+}
+
+span#typed_title {
+  font-size: 10rem;
+  font-weight: 900;
+  color: #1e272e;
+}
+
+.typed-cursor {
+  font-size: 10rem;
+  color: #1e272e;
+}
+
+.header__main {
+
+}
+
+img#scrollDownIcon {
+  position: absolute;
+  bottom: 0px;
+  top: 80vh;
+  left: 48.6vw;
+  right: 0px;
+  cursor: pointer;
+
+  animation: scrollDownAnimation 1.2s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+
+/* ------ MAIN BODY ------ */
+.main_body {
+
+}
+
+.toTopContainer {
+  width: 70px;
+  height: 100vh;
+  position: absolute;
+  background-color: #1e272e;
+  color: white;
+  font-size: 2rem;
+}
+
+.toTopContainer > h4 {
+  display: inline-block;
+  transform: rotate(-90deg);
+  width: 100px;
+}
+
+/* ------ ABOUT ------ */
+.about {
+  height: 500px;
+  position: relative;
+  margin-bottom: 400px;
+}
+
+.title__about {
+  position: relative;
+}
+
+.title__about::after {
+  content: '';
+  position: absolute;
+  background-color: #00d8d6;
+  height: 3px;
+  width: 180px;
+  top:    100%;
+  left:   0px;
+  right:  0px;
+  bottom: 0px;
+}
+
+.informationList {
+  font-size: 3rem;
+}
+
+.informationList > li {
+  list-style: none;
+  position: relative;
+  color: #d2dae2;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.informationList > li::before {
+  content: "—";
+  color: #808e9b;
+  font-weight: 600;
+  padding-right: 15px;
+}
+
+
+/* ------  PROFILE IMAGE ------ */
+.profileImageContainer {
+  height: 500px;
+  border-radius: 50%;
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+
+  position: relative;
+
+  background-image: url('../assets/images/author_image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.profileImageContainer::before {
+  content: 'ME';
+  font-size: 20rem;
+  position: absolute;
+  left: -200px;
+  font-weight: 900;
+  color: #ff5e57;
+}
+
+
+/* ------ SKILLS SECTION ------ */
+.skills {
+  position: relative;
+  height: 600px;
+  padding: 0;
+  margin-top: 300px;
+  margin-bottom: 400px;
+}
+
+#skillsTitle {
+  padding: 0;
+  margin: 0;
+  font-size: 15rem;
+}
+
+#skillsTitle::after {
+  content: '';
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: #ffd32a;
+  height: 3px;
+  width: 180px;
+  top:    100%;
+  right:  0px;
+  bottom: 0px;
+}
+
+.skills_list {
+  font-size: 4rem;
+  display: block;
+  float: right;
+  margin-top: 40px;
+}
+
+.skills > ul > li {
+  color: white;
+  list-style-type: none;
+  position: relative;
+}
+
+.skills > ul > li::before {
+  content: "🔷";
+}
+
+
+/* ------ AWARDS SECTION ------ */
+.awardsBody {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.awardsTitle {
+  font-size: 15rem;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+#awardsTitle::after {
+  content: '';
+  position: absolute;
+  background-color: #f53b57;
+  height: 3px;
+  width: 300px;
+  top:    0px;
+  right:  0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.awards_list {
+  font-size: 4rem;
+  display: block;
+  margin-top: 30px;
+  color: whitesmoke;
+  list-style: none;
+
+  position: relative;
+}
+
+.awards_list > li {
+  margin-bottom: 20px;
+}
+
+.awards_list > li::before {
+  content: "👻";
+  padding-right: 15px;
+}
+
+/* ------ CONTACT SECTION ------ */
+.contactBody {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  height: 600px;
+
+  margin-top: 400px;
+  margin-bottom: 300px;
+  position: relative;
+
+  border-radius: 5px;
+  border: 1px solid #3c40c6;
+
+  -webkit-box-shadow: 0px 20px 20px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 20px 20px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 20px 20px -10px rgba(0,0,0,0.75);
+}
+
+.contactBody > .rightSide > h5 {
+  font-size: 8rem;
+  font-weight: 900;
+}
+
+.leftSide {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightSide {
+  width: 50%;
+  background-color: palegoldenrod;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactInput {
+  display: block;
+  width: 500px;
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contactForm {
+  font-size: 1.5rem;
+  border: 1px solid #3c40c6;
+  margin: 25px;
+}
+
+.messageArea {
+  padding: 10px;
+  width: 500px;
+  font-family: "Montserrat", sans-serif;
+  height: 300px;
+  outline: 0;
+  border-radius: 3px;
+}
+
+
+/* ------ ANIMATIONS ------ */
+@keyframes scrollDownAnimation {
+  from { opacity: 0; transform: translateY(-15px)}
+  to   { opacity: 1; transform: translate(0px)}
+}
+
+
+/* ------  MOBILE RESPONSIVNESS ------ */
+@media only screen and (max-width: 620px) {
+  .header {
+    margin-bottom: 60px;
+  }
+
+  /* --- TYPED ANIMATION SECTION --- */
+  span#typed_title {
+    font-size: 6rem;
+  }
+
+  .typed-cursor {
+    font-size: 6rem;
+  }
+
+  /* --- ABOUT SECTION --- */
+  .about {
+    height: 300px;
+    position: relative;
+    margin-bottom: 0px;
+  }
+  
+  .title__about {
+    position: relative;
+    font-size: 6rem;
+  }
+  
+  .title__about::after {
+    content: '';
+    position: absolute;
+    background-color: #00d8d6;
+    height: 3px;
+    width: 80px;
+    top:    100%;
+    left:   0px;
+    right:  0px;
+    bottom: 0px;
+  }
+  
+  .informationList {
+    font-size: 2rem;
+  }
+  
+  .informationList > li {
+    list-style: none;
+    position: relative;
+    color: #d2dae2;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  /* --- Profile Image --- */
+  .profileImageContainer {
+    height: 300px;
+    width:  300px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  
+    position: relative;
+  
+    background-image: url('../assets/images/author_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .profileImageContainer::before {
+    content: 'ME';
+    font-size: 10rem;
+    position: absolute;
+    left: -20px;
+    font-weight: 900;
+    color: #ff5e57;
+  }
+
+  /* --- Skills Section --- */
+  .skills {
+    position: relative;
+    height: 600px;
+    padding: 0;
+    margin-top: 300px;
+    margin-bottom: 60px;
+  }
+  
+  #skillsTitle {
+    padding: 0;
+    margin: 0;
+    font-size: 6rem;
+  }
+  
+  #skillsTitle::after {
+    content: '';
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-color: #ffd32a;
+    height: 3px;
+    width: 180px;
+    top:    100%;
+    right:  0px;
+    bottom: 0px;
+  }
+  
+  .skills_list {
+    font-size: 4rem;
+    display: block;
+    float: right;
+    margin-top: 40px;
+  }
+  
+  .skills > ul > li {
+    color: white;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  .skills > ul > li::before {
+    content: "🔷";
+  }
+
+  /* ------ AWARDS SECTION ------ */
+  .awardsBody {
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  .awardsTitle {
+    font-size: 6rem;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  #awardsTitle::after {
+    content: '';
+    position: absolute;
+    background-color: #f53b57;
+    height: 3px;
+    width: 60px;
+    top:    0px;
+    right:  0px;
+    bottom: 0px;
+    left: 0px;
+  }
+
+  .awards_list {
+    font-size: 2.3rem;
+    display: block;
+    margin-top: 30px;
+    color: whitesmoke;
+    list-style: none;
+
+    position: relative;
+  }
+
+  .awards_list > li {
+    margin-bottom: 20px;
+  }
+
+  .awards_list > li::before {
+    content: "👻";
+    padding-right: 15px;
+  }
+
+  /* ------ CONTACT SECTION ------ */
+  .contactBody {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    height: 300px;
+
+    margin-top: 300px;
+    margin-bottom: 300px;
+    position: relative;
+
+    border-radius: 5px;
+    border: 1px solid #3c40c6;
+
+    -webkit-box-shadow: 0px 20px 20px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 20px 20px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 20px 20px -10px rgba(0,0,0,0.75);
+  }
+
+  .contactBody > .rightSide > h5 {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  .leftSide {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rightSide {
+    display: none;
+  }
+
+  .contactInput {
+    display: block;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .contactForm {
+    font-size: 1.5rem;
+    border: 1px solid #3c40c6;
+    margin: 10px;
+    width: 400px;
+  }
+
+  .messageArea {
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    height: 100px;
+    outline: 0;
+    border-radius: 3px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about {
+    height: 300px;
+    position: relative;
+    margin-bottom: 200px;
+  }
+}
